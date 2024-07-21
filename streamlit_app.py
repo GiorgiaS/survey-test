@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Display Image
-imagePath = ".\images\MetaversePlaza.jpeg"
+imagePath = "./images/MetaversePlaza.jpeg"
 st.image(imagePath)
 
 # Set text:
