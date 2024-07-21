@@ -30,7 +30,7 @@ columns = st.columns((2, 1, 2))
 buttonStart = columns[1].button('Start the survey')
 if buttonStart:
     # Redirect to another page
-    st.switch_page("./pages/page1.py")
+    st.switch_page("./pages/page2.py")
 
 # pg = st.navigation([st.Page("./pages/page1.py"), st.Page("./pages/page2.py")], position="hidden",)
 # pg.run()
