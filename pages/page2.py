@@ -5,7 +5,7 @@ import streamlit as st
 st.markdown("## Scenario 1:")
 st.markdown('Imagine you need to access SoftOrg\'s metaverse workspace to meet with representatives from a key client factory. Your manager and three colleagues will also be attending the meeting. In total, there will be five *SoftOrg* employees, including yourself, and two customer representatives connected to the virtual space.')
 st.markdown('''You and other participants must share, among others, data related to your physical aspect (i.e., the body shape) to access the virtual working space.  
-        The policy defined by the space related to the physical body is the following: 
+        The policy defined by the space related to the physical body is the following:  
         :star: Purpose = {Prp1, ...}  
         :star: Retention = 90 day  
         :star: Third party = {tp1, ...}  
@@ -17,4 +17,9 @@ with st.expander("See policy definition"):
                     **Third party:** to which parties external to the working space data are shared.  
                     ''')
 
-st.page_link("./pages/page3.py", label="Next")
+# Button for navigation
+columns = st.columns((2, 1, 2))
+buttonStart = columns[1].button('Next')
+if buttonStart:
+    # Redirect to another page
+    st.switch_page("./pages/page3.py")
