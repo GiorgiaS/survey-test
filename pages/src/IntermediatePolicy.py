@@ -11,7 +11,7 @@ from Printer import Printer
 
 class IntermediatePolicy():
 
-    def main():
+    def computeIntermediatePolicy():
         # Variables
         nPols = 10
         nPPs = 200
@@ -105,6 +105,3 @@ class IntermediatePolicy():
         printer.printPrivacySettings(filename, 'Policies:', polPrpList, polRetList, polTPList)
         printer.printPrivacySettings(filename, 'Privacy Preferences:', ppPrpList, ppRetList, ppTPList)
     
-
-    if __name__ == "__main__":
-        main()
