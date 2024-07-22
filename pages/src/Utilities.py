@@ -23,5 +23,5 @@ class Utilities:
         self.tpListCase1 = tpList.copy()
         
     def setRetCase1(self, ret):
-        self.retCase1 = ret.copy()
+        self.retCase1 = ret
         
