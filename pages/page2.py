@@ -10,16 +10,24 @@ st.markdown('''You and other participants must share, among others, data related
         :star: Retention = 90 day  
         :star: Third party = {Newsletter/Marketing, Project/Task management, Web analytics, Virtual meetings/events, Cloud computing service}  
         ''')
+# Eg of third parties:
+# https://www.convert.com/list-of-third-parties-with-whom-we-share-data/
+# :star: Third party = {Active Campaign, Asana, Google Analytics, Google Meet, AWS}  
+
 with st.expander("See policy definition"):
         st.markdown('''
                     **Purpose:** for which purpose data are collected by the metaverse working space. For instance, the physical aspectt is collected to provide the basic service.  
                     **Retention:** how long data is maintained. After this period, data is removed from databases. For instance, the physical aspect is retained for 90 days.  
                     **Third party:** to which parties external to the working space data are shared. For instance, the physical aspect is shared with third party emailing newsletter and marketing.  
-                    ''')
-        
-# Eg of third parties:
-# https://www.convert.com/list-of-third-parties-with-whom-we-share-data/
-# :star: Third party = {Active Campaign, Asana, Google Analytics, Google Meet, AWS}  
+                    ''')       
+
+st.markdown('''
+            Given the defined policy, select your privacy preferences staing to which extent do you want to share your physical body information.
+            ''')
+purposes = ['Basic service', 'Analytics/Research', 'Marketing', 'Legal requirement', 'Service operation and security', 'Additional service/feature']
+selectedPrp = st.checkbox('Purpose (select at leasto one):', purposes)
+st.write('You selected:', selectedPrp)
+
 
 # Button for navigation
 columns = st.columns((2, 1, 2))
