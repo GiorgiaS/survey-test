@@ -49,7 +49,7 @@ sd.setTpListCase1(tpList)
 
 retention = 90 #days
 st.markdown('Retention period:')
-selRet = st.slider("", 1, retention, retention//2)
+selRet = st.slider(1, retention, retention//2)
 sd.setRetCase1(selRet)
 
 # Button for navigation
