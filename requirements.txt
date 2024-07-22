@@ -1,5 +1,5 @@
 streamlit
 opencv-python-headless
-pymoo
+pymoo==0.6.0
 numpy<=1.26.4
 cython
