@@ -48,7 +48,7 @@ for tp in thyrdparties:
 sd.setTpListCase1(tpList)
 
 retention = 90 #days
-selRet = st.slider("Select the retention period", 1, retention, retention/2)
+selRet = st.slider("Select the retention period", 1, retention, retention//2)
 st.write('retention:', selRet)
 
 # Button for navigation
