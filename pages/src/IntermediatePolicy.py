@@ -3,11 +3,11 @@ import time
 import concurrent.futures
 import threading
 
-from PredefSets import PredefSets
-from MeanNumber import MeanNumber
-from ObjectiveSet import ObjectiveSet
-from Algorithms import Algorithms
-from Printer import Printer
+from pages.src.PredefSets import PredefSets
+from pages.src.MeanNumber import MeanNumber
+from pages.src.ObjectiveSet import ObjectiveSet
+from pages.src.Algorithms import Algorithms
+from pages.src.Printer import Printer
 
 class IntermediatePolicy():
 
