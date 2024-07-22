@@ -1,5 +1,7 @@
-from PredefSets import PredefSets
-from IntermediatePolicy import IntermediatePolicy
+from pages.src.PredefSets import PredefSets
+from pages.src.IntermediatePolicy import IntermediatePolicy
+
+
 predSet = PredefSets()
 ip = IntermediatePolicy()
 
