@@ -1,7 +1,10 @@
 import streamlit as st
+from src.SharedData import SharedData
 
-# st.write("""
-# Hello *World*""")
+
+
+sd = SharedData()
+
 st.markdown("## Scenario 1:")
 st.markdown('Imagine you need to access SoftOrg\'s metaverse workspace to meet with representatives from a key client factory. Your manager and three colleagues will also be attending the meeting. In total, there will be five *SoftOrg* employees, including yourself, and two customer representatives connected to the virtual space.')
 st.markdown('''You and other participants must share, among others, data related to your physical aspect (i.e., the body shape) to access the virtual working space.  
@@ -33,9 +36,20 @@ for prp in purposes:
         if selectedPrp:
                 prpList.append(prp)
 
-st.write('selected purposes:', prpList)
+sd.setprpListCase1(prpList)
         
+thyrdparties = ['Newsletter/Marketing', 'Project/Task management', 'Web analytics', 'Virtual meetings/events', 'Cloud computing service']
+st.markdown('Third parties (select at least one):')
+tpList = []
+for tp in thyrdparties:
+        selectedTP = st.checkbox(tp)
+        if selectedTP:
+                tpList.append(tp)
+sd.setTpListCase1(tpList)
 
+retention = 90 #days
+selRet = st.slider("Select the retention period", 1, retention, retention/2)
+st.write('retention:', selRet)
 
 # Button for navigation
 columns = st.columns((2, 1, 2))
