@@ -1,4 +1,4 @@
 streamlit
 opencv-python-headless
 pymoo
-numpy
+numpy==1.26.4
