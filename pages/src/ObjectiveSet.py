@@ -1,8 +1,7 @@
 from multiprocessing.pool import ThreadPool
-import unittest.mock
 # from pymoo.core.problem import ElementwiseProblem
 import os
-import jax.numpy
+import unittest.mock
 
 with unittest.mock.patch("pymoo.gradient.TOOLBOX", new='jax.numpy'):
     from pymoo.core.problem import ElementwiseProblem
