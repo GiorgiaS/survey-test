@@ -1,9 +1,9 @@
 import streamlit as st
-from pages.src.SharedData import SharedData
+from pages.src.Utilities import Utilities
+from pages.src.PredefSets import PredefSets
 
-
-
-sd = SharedData()
+predSets = PredefSets()
+util = Utilities()
 
 st.markdown("## Scenario 1:")
 st.markdown('Imagine you need to access SoftOrg\'s metaverse workspace to meet with representatives from a key client factory. Your manager and three colleagues will also be attending the meeting. In total, there will be five *SoftOrg* employees, including yourself, and two customer representatives connected to the virtual space.')
@@ -28,7 +28,7 @@ st.markdown('''
             Given the defined policy, select your privacy preferences staing to which extent do you want to share your physical body information.
             ''')
 
-purposes = ['Basic service', 'Analytics/Research', 'Marketing', 'Legal requirement', 'Service operation and security', 'Additional service/feature']
+purposes = predSets.getSpacePrpCase1()
 st.markdown('Purpose (select at leasto one):')
 prpList = []
 for prp in purposes:
@@ -36,7 +36,7 @@ for prp in purposes:
         if selectedPrp:
                 prpList.append(prp)
 
-sd.setprpListCase1(prpList)
+util.setprpListCase1(prpList)
         
 thyrdparties = ['Newsletter/Marketing', 'Project/Task management', 'Web analytics', 'Virtual meetings/events', 'Cloud computing service']
 st.markdown('Third parties (select at least one):')
@@ -45,12 +45,12 @@ for tp in thyrdparties:
         selectedTP = st.checkbox(tp)
         if selectedTP:
                 tpList.append(tp)
-sd.setTpListCase1(tpList)
+util.setTpListCase1(tpList)
 
 retention = 90 #days
 st.markdown('Retention period:')
-selRet = st.slider(1, retention, retention//2)
-sd.setRetCase1(selRet)
+selRet = st.slider("Retention", 1, retention, retention//2, label_visibility='collapsed')
+util.setRetCase1(selRet)
 
 # Button for navigation
 columns = st.columns((2, 1, 2))
@@ -58,3 +58,4 @@ buttonStart = columns[1].button('Next')
 if buttonStart:
     # Redirect to another page
     st.switch_page("./pages/page3.py")
+

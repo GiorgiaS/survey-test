@@ -1,4 +1,4 @@
-class SharedData:
+class Utilities:
     prpListCase1 = []
     tpListCase1 = []
     retCase1 = 1
