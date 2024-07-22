@@ -24,9 +24,12 @@ with st.expander("See policy definition"):
 st.markdown('''
             Given the defined policy, select your privacy preferences staing to which extent do you want to share your physical body information.
             ''')
+
 purposes = ['Basic service', 'Analytics/Research', 'Marketing', 'Legal requirement', 'Service operation and security', 'Additional service/feature']
-selectedPrp = st.checkbox('Purpose (select at leasto one):', purposes)
-st.write('You selected:', selectedPrp)
+st.markdown('Purpose (select at leasto one):')
+for prp in purposes:
+        selectedPrp = st.checkbox(prp)
+        st.write('You selected:', selectedPrp)
 
 
 # Button for navigation
