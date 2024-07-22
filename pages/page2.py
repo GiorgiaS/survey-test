@@ -47,7 +47,7 @@ for tp in thyrdparties:
                 tpList.append(tp)
 util.setTpListCase1(tpList)
 
-retention = 90 #days
+retention = predSets.getSpaceTPCase1() #days
 st.markdown('Retention period:')
 selRet = st.slider("Retention", 1, retention, retention//2, label_visibility='collapsed')
 util.setRetCase1(selRet)

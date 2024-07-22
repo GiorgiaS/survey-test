@@ -11,37 +11,32 @@ from Printer import Printer
 
 class IntermediatePolicy():
 
-    def computeIntermediatePolicy():
+    def computeIntermediatePolicy(self, case):
         # Variables
-        nPols = 10
-        nPPs = 200
-        minRet = 30
-        maxRet = 365
+        # nPols = 10
+        # nPPs = 200
+        # minRet = 30
+        # maxRet = 365
         predSets = PredefSets()
         algo = Algorithms()
         printer = Printer()
 
         # Algorithm time:
-        time_NSGA3 = 0
+        # time_NSGA3 = 0
 
         printer.initiateFolders()
 
         # Set Policies
         # pol = <{prp}, ret, {tp}>
-        polPrpList = predSets.getPrpListsPolicy(nPols)
-        polTPList = predSets.getTPListsPolicy(nPols)
-        polRetList = [] 
-        for i in range(nPols):
-            polRetList.append(random.randint(minRet, maxRet))
+        polPrpList = predSets.getPrpPolicy(case)
+        polTPList = predSets.getTPPolicy(case)
+        polRetList = predSets.getRetPolicy(case)
 
         # Set Privacy Preferences
         # pp = <{prp}, ret, {tp}>
-        # Purposes and Thurd Parties must be a subset of those in pol
-        ppPrpList = predSets.getPrpListsPP(nPPs)
-        ppTPList = predSets.getTPListsPP(nPPs)
-        ppRetList = [] 
-        for i in range(nPPs):
-            ppRetList.append(random.randint(minRet, maxRet))
+        ppPrpList = predSets.getPrpPP(case)
+        ppTPList = predSets.getTPPP(case)
+        ppRetList = predSets.getRetPP(case)
         
         #####
         # PURPOSE
@@ -70,8 +65,9 @@ class IntermediatePolicy():
         meanN = MeanNumber()
         retReq = 'retention'
         
+        
         # Start threads using ThreadPoolExecutor
-        st = time.time()
+        # st = time.time()
         newPrp = newTP = ''
         newRet = 0
         differencePrp = differenceTP = 0
@@ -87,21 +83,21 @@ class IntermediatePolicy():
             differenceTP, newTP, TPResultDict, bsTP = future_tp.result()
             newRet = future_ret.result()
 
-        time_NSGA3 = time.time()-st
+        # time_NSGA3 = time.time()-st
         
-        # Print results 
-        printer.printSetResults(prpReq, PrpResultDict, bsPrp, differencePrp)
-        printer.printSetResults(tpReq, TPResultDict, bsTP, differenceTP)
-        printer.printNumResults(retReq, ppRetList, polRetList, newRet)
+        # # Print results 
+        # printer.printSetResults(prpReq, PrpResultDict, bsPrp, differencePrp)
+        # printer.printSetResults(tpReq, TPResultDict, bsTP, differenceTP)
+        # printer.printNumResults(retReq, ppRetList, polRetList, newRet)
         
 
-
-        newPolicy = "<" + str(newPrp) + ", " + str(newRet) + ", " + str(newTP) + ">"
+        # newPolicy = "<" + str(newPrp) + ", " + str(newRet) + ", " + str(newTP) + ">"
         # print("\nIntermediatePolicy.Main - New Policy (NSGA-III):", newPolicy_NSGAIII)
-
+        
         # Final result with policies and privacy preferences
-        filename = 'Overall_Results'
-        printer.printFinalResults(filename, time_NSGA3, newPolicy)
-        printer.printPrivacySettings(filename, 'Policies:', polPrpList, polRetList, polTPList)
-        printer.printPrivacySettings(filename, 'Privacy Preferences:', ppPrpList, ppRetList, ppTPList)
+        # filename = 'Overall_Results'
+        # printer.printFinalResults(filename, time_NSGA3, newPolicy)
+        # printer.printPrivacySettings(filename, 'Policies:', polPrpList, polRetList, polTPList)
+        # printer.printPrivacySettings(filename, 'Privacy Preferences:', ppPrpList, ppRetList, ppTPList)
     
+        return newPrp, newRet, newTP
