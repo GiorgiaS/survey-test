@@ -27,9 +27,14 @@ st.markdown('''
 
 purposes = ['Basic service', 'Analytics/Research', 'Marketing', 'Legal requirement', 'Service operation and security', 'Additional service/feature']
 st.markdown('Purpose (select at leasto one):')
+prpList = []
 for prp in purposes:
         selectedPrp = st.checkbox(prp)
-        st.write('You selected:', selectedPrp)
+        if selectedPrp:
+                prpList.append(prp)
+
+st.write('selected purposes:', prpList)
+        
 
 
 # Button for navigation
