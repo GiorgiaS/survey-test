@@ -1,5 +1,5 @@
 from multiprocessing.pool import ThreadPool
-from pymoo.core.problem import *
+from pymoo.core.problem import ElementwiseProblem
 import os
 
 # pool = ThreadPool(8)
