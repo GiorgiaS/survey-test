@@ -1,5 +1,5 @@
 import streamlit as st
-from src.SharedData import SharedData
+from pages.src.SharedData import SharedData
 
 
 
