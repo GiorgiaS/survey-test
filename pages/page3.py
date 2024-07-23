@@ -40,9 +40,8 @@ st.write('Retention: ', newRet)
 retPP = util.getRetListCase1()
 retPol = predSets.getSpaceRetCase1()
 with st.expander("Extend to compare your preference with the policy"):
-    # st.write('Your preference:', retPP)
+    st.write('Your preference:', retPP)
     # st.write('Policy:', retPol)
-    st.write('Your Preference:', '[', ', '.join(retPP), ']')
     st.write('Policy:', '[', ', '.join(retPol), ']')
 
 st.markdown('''
