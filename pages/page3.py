@@ -21,11 +21,11 @@ st.write('Purpose:', newPrp)
 prpPP = util.getprpListCase1()
 prpPol = predSets.getSpacePrpCase1()
 with st.expander("Extend to compare your preference with the policy"):
-    st.write('Your preference:', prpPP)
+    st.write('Your preference:', st.session_state['prp_user'])
     st.write('Policy:', prpPol) 
              
 st.write('Third Party:', newTP)
-tpPP = util.getTPListCase1()
+tpPP = util.getTpListCase1()
 tpPol = predSets.getSpaceTPCase1()
 with st.expander("Extend to compare your preference with the policy"):
     st.write('Your preference:', tpPP)
@@ -56,7 +56,7 @@ with st.expander("Extend to see the third parties"):
         i += 1
         st.write(i, tp)
         
-retentions = predSets.getPrpPP(case)
+retentions = predSets.getRetPP(case)
 with st.expander("Extend to see the retention periods"):
     i = 0
     for ret in retentions:
