@@ -69,8 +69,8 @@ with st.expander("Extend to see the retention periods"):
     i = 0
     for ret in retentions:
         i += 1
-        # st.write(i, ret)
-        st.write(i, '[', ', '.join(ret), ']')
+        st.write(i, ret)
+        # st.write(i, '[', ', '.join(ret), ']')
 
 
 # st.page_link("./pages/page2.py", label="Back")
