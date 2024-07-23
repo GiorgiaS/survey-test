@@ -11,7 +11,7 @@ from pages.src.Printer import Printer
 
 class IntermediatePolicy():
 
-    def computeIntermediatePolicy(self, case):
+    def computeIntermediatePolicy(self, case, util):
         # Variables
         # nPols = 10
         # nPPs = 200
@@ -34,9 +34,9 @@ class IntermediatePolicy():
 
         # Set Privacy Preferences
         # pp = <{prp}, ret, {tp}>
-        ppPrpList = predSets.getPrpPP(case)
-        ppTPList = predSets.getTPPP(case)
-        ppRetList = predSets.getRetPP(case)
+        ppPrpList = predSets.getPrpPP(case, util)
+        ppTPList = predSets.getTPPP(case, util)
+        ppRetList = predSets.getRetPP(case, util)
         
         #####
         # PURPOSE

@@ -6,11 +6,12 @@ from pages.src.PredefSets import PredefSets
 # Do the computation
 ip = IntermediatePolicy()
 case = 1
-newPrp, newRet, newTP = ip.computeIntermediatePolicy(case)
+util = st.session_state['user_utils']
+
+newPrp, newRet, newTP = ip.computeIntermediatePolicy(case, util)
 
 # Print results 
 predSets = PredefSets()
-util = Utilities()
 
 st.markdown('''
             ## Intermediate Policy  
@@ -21,7 +22,7 @@ st.write('Purpose:', newPrp)
 prpPP = util.getprpListCase1()
 prpPol = predSets.getSpacePrpCase1()
 with st.expander("Extend to compare your preference with the policy"):
-    st.write('Your preference:', st.session_state['prp_user'])
+    st.write('Your preference:', prpPP)
     st.write('Policy:', prpPol) 
              
 st.write('Third Party:', newTP)

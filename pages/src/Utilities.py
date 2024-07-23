@@ -10,7 +10,7 @@ class Utilities:
     def getTpListCase1(self):
         return self.tpListCase1
     
-    def getRetCase1(self):
+    def getRetListCase1(self):
         return self.retCase1
     
     

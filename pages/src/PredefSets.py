@@ -60,7 +60,7 @@ class PredefSets:
         return pol
     
     # Returns all purposes    
-    def getPrpPP(self, case):
+    def getPrpPP(self, case, util):
         pp = []
         if case == 1:
             pp.append(self.customer1PrpCase1)
@@ -69,6 +69,7 @@ class PredefSets:
             pp.append(self.peer2PrpCase1)
             pp.append(self.peer3PrpCase1)
             pp.append(self.managerPrpCase1)
+            pp.append(util.getprpListCase1())
             
         return pp
     
@@ -132,7 +133,7 @@ class PredefSets:
         
         return pol
         
-    def getTPPP(self, case):
+    def getTPPP(self, case, util):
         pp = []
         if case == 1:
             pp.append(self.customer1TPCase1)
@@ -141,6 +142,7 @@ class PredefSets:
             pp.append(self.peer2TPCase1)
             pp.append(self.peer3TPCase1)
             pp.append(self.managerTPCase1)
+            pp.append(util.getTpListCase1())
             
         return pp
     
@@ -204,7 +206,7 @@ class PredefSets:
         
         return pol
         
-    def getRetPP(self, case):
+    def getRetPP(self, case, util):
         pp = []
         if case == 1:
             pp.append(self.customer1RetCase1)
@@ -213,6 +215,7 @@ class PredefSets:
             pp.append(self.peer2RetCase1)
             pp.append(self.peer3RetCase1)
             pp.append(self.managerRetCase1)
+            pp.append(util.getRetListCase1())
             
         return pp
             
