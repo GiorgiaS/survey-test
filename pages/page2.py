@@ -83,8 +83,8 @@ st.session_state['user_utils'] = util
 columns = st.columns((2, 1, 2))
 buttonStart = columns[1].button('Next')
 if buttonStart:
-        if prpList == None | tpList == None:
-                if prpList == None & tpList == None:
+        if prpList == None or tpList == None:
+                if prpList == None and tpList == None:
                         askPreferences('purposes', 'third-parties')
                 elif prpList == None:
                         askPreferences('purposes')
