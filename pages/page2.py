@@ -37,6 +37,7 @@ for prp in purposes:
                 prpList.append(prp)
 
 util.setprpListCase1(prpList)
+st.session_state['prp_user'] = prpList
         
 thyrdparties = ['Newsletter/Marketing', 'Project/Task management', 'Web analytics', 'Virtual meetings/events', 'Cloud computing service']
 st.markdown('Third parties (select at least one):')
@@ -46,11 +47,13 @@ for tp in thyrdparties:
         if selectedTP:
                 tpList.append(tp)
 util.setTpListCase1(tpList)
+st.session_state['tp_user'] = tpList
 
 retention = predSets.getSpaceRetCase1() #days
 st.markdown('Retention period:')
 selRet = st.slider("Retention", 1, retention, retention//2, label_visibility='collapsed')
 util.setRetCase1(selRet)
+st.session_state['ret_user'] = selRet
 
 # Button for navigation
 columns = st.columns((2, 1, 2))
