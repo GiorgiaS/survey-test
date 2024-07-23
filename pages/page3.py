@@ -41,8 +41,8 @@ retPP = util.getRetListCase1()
 retPol = predSets.getSpaceRetCase1()
 with st.expander("Extend to compare your preference with the policy"):
     st.write('Your preference:', retPP)
-    # st.write('Policy:', retPol)
-    st.write('Policy:', '[', ', '.join(retPol), ']')
+    st.write('Policy:', retPol)
+    
 
 st.markdown('''
             You can compare the results with the preferences of the other participants. Please note that this information is usually private, and accessing the privacy preferences of others is not allowed.
