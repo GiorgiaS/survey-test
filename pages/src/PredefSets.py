@@ -58,7 +58,8 @@ class PredefSets:
             pol.append(self.getSpacePrpCase1())
             
         return pol
-        
+    
+    # Returns all purposes    
     def getPrpPP(self, case):
         pp = []
         if case == 1:
