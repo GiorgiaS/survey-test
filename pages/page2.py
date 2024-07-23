@@ -55,7 +55,7 @@ for prp in purposes:
         selectedPrp = st.checkbox(prp)
         if selectedPrp:
                 prpList.append(prp)
-if prpList == None: # If the user does not select any prp, take all
+if not prpList: # If the user does not select any prp, take all
         util.setprpListCase1(predSets.getSpacePrpCase1())
 else:
         util.setprpListCase1(prpList)
@@ -67,7 +67,7 @@ for tp in thyrdparties:
         selectedTP = st.checkbox(tp)
         if selectedTP:
                 tpList.append(tp)
-if tpList == None:  # If the user does not select any tp, take all
+if not tpList:  # If the user does not select any tp, take all
         util.setTpListCase1(predSets.getSpaceTPCase1())
 else:
         util.setTpListCase1(tpList)
@@ -83,12 +83,12 @@ st.session_state['user_utils'] = util
 columns = st.columns((2, 1, 2))
 buttonStart = columns[1].button('Next')
 if buttonStart:
-        if prpList == None or tpList == None:
-                if prpList == None and tpList == None:
+        if not prpList or not tpList:
+                if not prpList and not tpList:
                         askPreferences('purposes', 'third-parties')
-                elif prpList == None:
+                elif not prpList:
                         askPreferences('purposes')
-                elif tpList == None:
+                elif not tpList:
                         askPreferences('third-parties')
         else:        
                 # Redirect to another page
