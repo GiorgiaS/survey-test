@@ -10,8 +10,8 @@ class PredefSets:
     customer2PrpCase1 = ['Basic service', 'Service operation and security', 'Additional service/feature']
     managerPrpCase1 = ['Basic service', 'Analytics/Research', 'Marketing', 'Legal requirement', 'Service operation and security', 'Additional service/feature']
     peer1PrpCase1 = ['Basic service', 'Legal requirement', 'Service operation and security', 'Additional service/feature']
-    peer2PrpCase1 = ['Basic service', 'Analytics/Research', 'Marketing', 'Legal requirement']
-    peer3PrpCase1 = ['Basic service', 'Service operation and security', 'Additional service/feature']
+    peer2PrpCase1 = ['Basic service', 'Analytics/Research', 'Legal requirement']
+    peer3PrpCase1 = ['Basic service', 'Service operation and security']
     
     spaceTPCase1 = ['Newsletter/Marketing', 'Project/Task management', 'Web analytics', 'Virtual meetings/events', 'Cloud computing service']
     customer1TPCase1 = ['Newsletter/Marketing', 'Project/Task management', 'Cloud computing service']
@@ -70,6 +70,18 @@ class PredefSets:
             pp.append(self.peer3PrpCase1)
             pp.append(self.managerPrpCase1)
             pp.append(util.getprpListCase1())
+            
+        return pp
+    
+    def getPrpPP(self, case):
+        pp = []
+        if case == 1:
+            pp.append(self.customer1PrpCase1)
+            pp.append(self.customer2PrpCase1)
+            pp.append(self.peer1PrpCase1)
+            pp.append(self.peer2PrpCase1)
+            pp.append(self.peer3PrpCase1)
+            pp.append(self.managerPrpCase1)
             
         return pp
     
@@ -146,6 +158,18 @@ class PredefSets:
             
         return pp
     
+    def getTPPP(self, case):
+        pp = []
+        if case == 1:
+            pp.append(self.customer1TPCase1)
+            pp.append(self.customer2TPCase1)
+            pp.append(self.peer1TPCase1)
+            pp.append(self.peer2TPCase1)
+            pp.append(self.peer3TPCase1)
+            pp.append(self.managerTPCase1)
+            
+        return pp
+    
     def getPowersetTP(self, case):
         allTPList = self.getTPPolicy(case)  # Convert the input iterable to a list.
         prpList = []
@@ -216,6 +240,18 @@ class PredefSets:
             pp.append(self.peer3RetCase1)
             pp.append(self.managerRetCase1)
             pp.append(util.getRetListCase1())
+            
+        return pp
+    
+    def getRetPP(self, case):
+        pp = []
+        if case == 1:
+            pp.append(self.customer1RetCase1)
+            pp.append(self.customer2RetCase1)
+            pp.append(self.peer1RetCase1)
+            pp.append(self.peer2RetCase1)
+            pp.append(self.peer3RetCase1)
+            pp.append(self.managerRetCase1)
             
         return pp
             
