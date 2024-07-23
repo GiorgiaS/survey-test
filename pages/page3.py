@@ -8,7 +8,8 @@ ip = IntermediatePolicy()
 case = 1
 util = st.session_state['user_utils']
 
-newPrp, newRet, newTP = ip.computeIntermediatePolicy(case, util)
+with st.spinner('...I am computing...'):
+    newPrp, newRet, newTP = ip.computeIntermediatePolicy(case, util)
 
 # Print results
 predSets = PredefSets()
