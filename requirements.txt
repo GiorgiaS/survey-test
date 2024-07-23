@@ -8,5 +8,5 @@ streamlit
 # python_abi==3.12
 opencv-python-headless
 numpy==1.26.4
-numpy-base==1.26.4
+# numpy-base==1.26.4
 pymoo==0.6.1.1
