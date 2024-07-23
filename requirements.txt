@@ -2,10 +2,10 @@
 # $ conda create --name <env> --file <this file>
 # platform: linux-64
 streamlit
-python==3.12
-python-dateutil==2.9.0post0
-python-tzdata==2023.3
-python_abi==3.12
+# python==3.12
+# python-dateutil==2.9.0post0
+# python-tzdata==2023.3
+# python_abi==3.12
 opencv-python-headless
 numpy==1.26.4
 numpy-base==1.26.4
