@@ -172,7 +172,7 @@ packaging==24.0=pypi_0
 pandas==2.2.2=py312h526ad5a_0
 pcre2==10.42=hebb0a14_1
 pillow==10.4.0=py312h5eee18b_0
-pip==24.0=py312h06a4308_0
+# pip==24.0=py312h06a4308_0
 pixman==0.43.2=h59595ed_0
 ply==3.11=py312h06a4308_1
 protobuf==4.25.3=py312h12ddb61_0
