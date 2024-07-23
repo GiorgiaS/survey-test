@@ -42,22 +42,22 @@ class IntermediatePolicy():
         # PURPOSE
         #####
         prpReq = 'purpose'
-        allPrpLists = predSets.getPowersetPrp(case)
-        # print("IntermediatePolicy.main - Purpose powerset:", allPrpLists)
-        # print("IntermediatePolicy.main - Purpose powerset:", type(allPrpLists))
+        prpPowerset = predSets.getPowersetPrp(case)
+        # print("IntermediatePolicy.main - Purpose powerset:", prpPowerset)
+        # print("IntermediatePolicy.main - Purpose powerset:", type(prpPowerset))
         prpDict = predSets.getPrpDict(case)
-        objPrp = ObjectiveSet(polPrpList, ppPrpList, allPrpLists, prpDict)
+        objPrp = ObjectiveSet(polPrpList, ppPrpList, prpPowerset, prpDict)
 
         #####
         # THIRD PARTY
         #####
         # i.e., the intermediate set with the smaller value returned by the objective algorithm
         tpReq = 'third-party'
-        allTPLists = predSets.getPowersetTP(case)
-        # print("IntermediatePolicy.main - TP powerset:", allTPLists)
-        # print("IntermediatePolicy.main - TP powerset:", type(allTPLists))
+        tpPowerset = predSets.getPowersetTP(case)
+        # print("IntermediatePolicy.main - TP powerset:", tpPowerset)
+        # print("IntermediatePolicy.main - TP powerset:", type(tpPowerset))
         tpDict = predSets.getTPDict(case)
-        objTP = ObjectiveSet(polTPList, ppTPList, allTPLists, tpDict)
+        objTP = ObjectiveSet(polTPList, ppTPList, tpPowerset, tpDict)
         
         #####
         # RETENTION
@@ -100,4 +100,4 @@ class IntermediatePolicy():
         # printer.printPrivacySettings(filename, 'Policies:', polPrpList, polRetList, polTPList)
         # printer.printPrivacySettings(filename, 'Privacy Preferences:', ppPrpList, ppRetList, ppTPList)
     
-        return newPrp, newRet, newTP
+        return newPrp, newRet, newTP, len(ppPrpList)

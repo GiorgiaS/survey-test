@@ -8,7 +8,7 @@ ip = IntermediatePolicy()
 case = 1
 util = st.session_state['user_utils']
 
-newPrp, newRet, newTP = ip.computeIntermediatePolicy(case, util)
+newPrp, newRet, newTP, nPPPrp = ip.computeIntermediatePolicy(case, util)
 
 # Print results 
 predSets = PredefSets()
@@ -19,6 +19,7 @@ st.markdown('''
             ''')
 
 st.write('Purpose:', newPrp)
+st.write('Prp numbers:', nPPPrp)
 prpPP = util.getprpListCase1()
 prpPol = predSets.getSpacePrpCase1()
 with st.expander("Extend to compare your preference with the policy"):
