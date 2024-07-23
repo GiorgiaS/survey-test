@@ -2,7 +2,7 @@
 # $ conda create --name <env> --file <this file>
 # platform: linux-64
 streamlit
-python==3.12.2
+python==3.12
 python-dateutil==2.9.0post0
 python-tzdata==2023.3
 python_abi==3.12
