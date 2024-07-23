@@ -42,10 +42,10 @@ class IntermediatePolicy():
         # PURPOSE
         #####
         prpReq = 'purpose'
-        allPrpLists = predSets.getPowersetPrp()
+        allPrpLists = predSets.getPowersetPrp(case)
         # print("IntermediatePolicy.main - Purpose powerset:", allPrpLists)
         # print("IntermediatePolicy.main - Purpose powerset:", type(allPrpLists))
-        prpDict = predSets.getPrpDict()
+        prpDict = predSets.getPrpDict(case)
         objPrp = ObjectiveSet(polPrpList, ppPrpList, allPrpLists, prpDict)
 
         #####
@@ -53,10 +53,10 @@ class IntermediatePolicy():
         #####
         # i.e., the intermediate set with the smaller value returned by the objective algorithm
         tpReq = 'third-party'
-        allTPLists = predSets.getPowersetTP()
+        allTPLists = predSets.getPowersetTP(case)
         # print("IntermediatePolicy.main - TP powerset:", allTPLists)
         # print("IntermediatePolicy.main - TP powerset:", type(allTPLists))
-        tpDict = predSets.getTPDict()
+        tpDict = predSets.getTPDict(case)
         objTP = ObjectiveSet(polTPList, ppTPList, allTPLists, tpDict)
         
         #####
