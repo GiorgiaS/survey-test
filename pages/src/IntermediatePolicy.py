@@ -100,4 +100,4 @@ class IntermediatePolicy():
         # printer.printPrivacySettings(filename, 'Policies:', polPrpList, polRetList, polTPList)
         # printer.printPrivacySettings(filename, 'Privacy Preferences:', ppPrpList, ppRetList, ppTPList)
     
-        return newPrp, newRet, newTP, len(ppPrpList)
+        return newPrp, newRet, newTP
