@@ -21,6 +21,11 @@ st.markdown("""
         .stDeployButton {display:none;}
         footer {visibility: hidden;}
         #stDecoration {display:none;}
+        #GithubIcon {visibility: hidden;}
+        .stDeployButton {display:none;}
+        footer {visibility: hidden;}
+        #stDecoration {display:none;}
+        #stSidebarNav {display: none;}
     </style>
 """, unsafe_allow_html=True)
 
