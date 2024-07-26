@@ -8,17 +8,16 @@ def set_page_config():
     st.set_page_config(
         page_title="Privacy-Preserving Metaverse",
         layout="wide",
-        visibility="hidden",
     )
 set_page_config()
 
-# # Hide menu
-# hide_github_icon = """
-# #GithubIcon {
-#   visibility: hidden;
-# }
-# """
-# st.markdown(hide_github_icon, unsafe_allow_html=True)
+# Hide menu
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
 # Make the app take up all the available space in the browser window and not just a single column
