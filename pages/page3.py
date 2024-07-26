@@ -4,12 +4,23 @@ from pages.src.Utilities import Utilities
 from pages.src.PredefSets import PredefSets
 
 # Hide menu
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .reportview-container {
+            margin-top: -2em;
+        }
+        #MainMenu {visibility: hidden;}
+        .stDeployButton {display:none;}
+        footer {visibility: hidden;}
+        #stDecoration {display:none;}
+        #GithubIcon {visibility: hidden;}
+        .stDeployButton {display:none;}
+        footer {visibility: hidden;}
+        #stDecoration {display:none;}
+        #stSidebarNav {display: none;}
+    </style>
+""", unsafe_allow_html=True)
+
 
 # Do the computation
 ip = IntermediatePolicy()
