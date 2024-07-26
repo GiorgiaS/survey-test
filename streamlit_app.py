@@ -26,6 +26,7 @@ st.markdown("""
         footer {visibility: hidden;}
         #stDecoration {display:none;}
         #stSidebarNav {display: none;}
+        #root > div:nth-child(1) > div.withScreencast > div > div > header > div.st-emotion-cache-15ecox0.ezrtsby0 > div > div:nth-child(3) {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
