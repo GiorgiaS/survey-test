@@ -2,6 +2,14 @@ import streamlit as st
 from pages.src.Utilities import Utilities
 from pages.src.PredefSets import PredefSets
 
+# Hide menu
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 # Default behaviour if the user does not select the privacy preference
 @st.experimental_dialog("Check your preferences") # https://docs.streamlit.io/develop/api-reference/execution-flow/st.dialog
 def askPreferences(*items):

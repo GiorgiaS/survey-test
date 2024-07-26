@@ -3,6 +3,14 @@ from pages.src.IntermediatePolicy import IntermediatePolicy
 from pages.src.Utilities import Utilities
 from pages.src.PredefSets import PredefSets
 
+# Hide menu
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 # Do the computation
 ip = IntermediatePolicy()
 case = 1
